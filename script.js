@@ -24,12 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
         emailLink.addEventListener("click", async (event) => {
             event.preventDefault();
 
-            const email = emailLink.textContent.trim();
+            const email = emailLink.dataset.email || emailLink.textContent.trim();
+            const originalText = emailLink.textContent;
 
             try {
                 await navigator.clipboard.writeText(email);
-
-                const originalText = emailLink.textContent;
                 emailLink.textContent = "이메일이 복사되었습니다";
 
                 setTimeout(() => {
@@ -37,8 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, 1500);
             } catch (error) {
                 console.error("클립보드 복사 실패:", error);
-
-                const originalText = emailLink.textContent;
                 emailLink.textContent = "복사에 실패했습니다";
 
                 setTimeout(() => {
