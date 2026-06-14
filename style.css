@@ -1,0 +1,138 @@
+:root {
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --text: #111827;
+    --sub-text: #6b7280;
+    --line: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+.business-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 44px 36px;
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    box-shadow: 0 16px 40px rgba(17, 24, 39, 0.08);
+}
+
+.profile-image {
+    width: 136px;
+    height: 136px;
+    margin: 0 auto 28px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #f3f4f6;
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 24px rgba(17, 24, 39, 0.1);
+}
+
+.profile-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    margin-bottom: 8px;
+    color: var(--text);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.job {
+    margin-bottom: 30px;
+    color: var(--sub-text);
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 30px;
+    background: var(--line);
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contact-label {
+    min-width: 72px;
+    color: var(--text);
+    font-weight: 700;
+    text-align: right;
+}
+
+.contact-link {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 34px;
+    color: var(--sub-text);
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    .business-card {
+        padding: 36px 24px;
+    }
+
+    .profile-image {
+        width: 116px;
+        height: 116px;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .job {
+        font-size: 15px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .contact-label {
+        min-width: auto;
+        text-align: center;
+    }
+}
