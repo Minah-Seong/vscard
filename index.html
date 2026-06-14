@@ -1,93 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹 명함 카드</title>
-
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Business Card</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="card">
+    <section class="profile">
+      <img src="holiday.jpeg" alt="프로필 이미지" class="profile-img" />
 
-    <main class="business-card">
+      <h1>성민아</h1>
+      <p class="job">3rd Year Game Designer</p>
+    </section>
 
-        <div class="profile-image">
-            <img src="./holiday.jpeg" alt="프로필 이미지">
-        </div>
+    <section class="intro">
+      <p class="catchphrase">
+        사용자를 끊임없이 분석하며 <span>Why</span>를 생각하는 기획자
+      </p>
 
-        <h1 class="name">성민아</h1>
+      <div class="key-points">
+        <h2>Key Point</h2>
+        <ol>
+          <li>게임 콘텐츠 보상 및 재화 관련 시스템 개선 기획</li>
+          <li>게임 이벤트 &amp; BM 기획</li>
+          <li>게임 경제 데이터 분석 및 개선 방안 기획</li>
+        </ol>
+      </div>
+    </section>
 
-        <p class="job">3rd Year Game Designer</p>
+    <div class="divider"></div>
 
-        <div class="divider"></div>
+    <section class="contact">
+      <div class="contact-row">
+        <span class="label">Email</span>
+        <span class="value" id="email">rinette9612@gmail.com</span>
+        <button type="button" class="small-btn" id="copyEmailBtn">복사</button>
+      </div>
 
-        <section class="contact-list" aria-label="연락처">
+      <div class="contact-row">
+        <span class="label">Phone</span>
+        <span class="value">010-8859-0506</span>
+        <button type="button" class="small-btn" id="callBtn">연결</button>
+      </div>
+    </section>
 
-            <div class="contact-item">
-                <div class="contact-text">
-                    <span class="contact-label">Email</span>
+    <section class="link-buttons">
+      <a href="https://github.com/Minah-Seong" target="_blank" class="main-btn">
+        💻 Github
+      </a>
 
-                    <span
-                        class="contact-value"
-                        id="emailText"
-                    >
-                        rinette9612@gmail.com
-                    </span>
-                </div>
+      <a href="#" target="_blank" class="main-btn">
+        🗂️ Portfolio
+      </a>
+    </section>
+  </main>
 
-                <button
-                    class="contact-action"
-                    type="button"
-                    id="copyEmailButton"
-                >
-                    복사
-                </button>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-text">
-                    <span class="contact-label">Phone</span>
-
-                    <span class="contact-value">
-                        010-8859-0506
-                    </span>
-                </div>
-
-                <a
-                    class="contact-action"
-                    href="tel:01088590506"
-                >
-                    연결
-                </a>
-            </div>
-
-        </section>
-
-        <div class="button-group">
-
-            <a
-                class="card-button"
-                href="https://github.com/Minah-Seong"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                💻 Github
-            </a>
-
-            <a
-                class="card-button"
-                href="https://drive.google.com/drive/folders/1DOy1oLp1RlWFRvse1Yh1xKD27joImujr?usp=drive_link"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                🗂️ Portfolio
-            </a>
-
-        </div>
-
-    </main>
-
-    <script src="./script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
