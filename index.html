@@ -7,8 +7,8 @@
 
     <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
+
     <main class="business-card">
 
         <div class="profile-image">
@@ -24,25 +24,40 @@
         <section class="contact-list" aria-label="연락처">
 
             <div class="contact-item">
-                <span class="contact-label">Email</span>
+                <div class="contact-text">
+                    <span class="contact-label">Email</span>
 
-                <a
-                    class="contact-link"
-                    href="mailto:rinette9612@gmail.com"
-                    data-email="rinette9612@gmail.com"
+                    <span
+                        class="contact-value"
+                        id="emailText"
+                    >
+                        rinette9612@gmail.com
+                    </span>
+                </div>
+
+                <button
+                    class="contact-action"
+                    type="button"
+                    id="copyEmailButton"
                 >
-                    rinette9612@gmail.com
-                </a>
+                    복사
+                </button>
             </div>
 
             <div class="contact-item">
-                <span class="contact-label">Phone</span>
+                <div class="contact-text">
+                    <span class="contact-label">Phone</span>
+
+                    <span class="contact-value">
+                        010-8859-0506
+                    </span>
+                </div>
 
                 <a
-                    class="contact-link"
+                    class="contact-action"
                     href="tel:01088590506"
                 >
-                    010-8859-0506
+                    연결
                 </a>
             </div>
 
@@ -73,5 +88,6 @@
     </main>
 
     <script src="./script.js"></script>
+
 </body>
 </html>
